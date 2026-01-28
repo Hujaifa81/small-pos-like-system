@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React from 'react';
+// React import not required with the new JSX transform
 import { Form, Input, Button, Card, Typography, message } from 'antd';
+import { Link } from 'react-router-dom';
 import { useMutation } from '@tanstack/react-query';
 import { useNavigate } from 'react-router-dom';
 import { axiosInstance } from '../lib/axios';
@@ -84,6 +85,9 @@ export default function Register() {
               Create account
             </Button>
           </Form.Item>
+          <div style={{ textAlign: 'center', marginTop: 8 }}>
+            Already have an account? <Link to="/login">Sign in</Link>
+          </div>
         </Form>
       </Card>
     </div>

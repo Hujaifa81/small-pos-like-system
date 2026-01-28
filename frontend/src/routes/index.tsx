@@ -17,7 +17,6 @@ import { userSidebarItems } from './userSidebarItems';
 const ProductsList = lazy(() => import('../pages/Admin/ProductsList'));
 const ProductCreate = lazy(() => import('../pages/Admin/ProductCreate'));
 const ProductEdit = lazy(() => import('../pages/Admin/ProductEdit'));
-const SalesOverview = lazy(() => import('../pages/Admin/SalesOverview'));
 
 const router = createBrowserRouter([
     {
@@ -28,25 +27,21 @@ const router = createBrowserRouter([
             { path: 'unauthorized', element: <Unauthorized /> },
         ],
     },
+    // merge admin routes into /app so all admin pages live under /app/*
     {
-        path: '/admin',
-        element: React.createElement(withAuth(DashboardLayout, 'ADMIN')),
+        path: '/app',
+        element: React.createElement(withAuth(DashboardLayout, ['ADMIN', 'CASHIER'])),
         children: [
+            ...generateRoutes(userSidebarItems),
+            { path: 'sales', element: <Sales /> },
+            // admin pages merged under /app
             ...generateRoutes(adminSidebarItems),
             { path: 'products', element: <ProductsList /> },
             { path: 'products/create', element: <ProductCreate /> },
             { path: 'products/:id/edit', element: <ProductEdit /> },
-            { path: 'sales', element: <SalesOverview /> },
         ],
     },
-    {
-        path: '/app',
-        element: React.createElement(withAuth(DashboardLayout, 'CASHIER')),
-        children: [
-            ...generateRoutes(userSidebarItems),
-            { path: 'sales', element: <Sales /> },
-        ],
-    },
+    { path: '/app/products/create', element: <ProductCreate /> },
     { path: '/products', element: <Products /> },
     { path: '/products/:id', element: <ProductDetails /> },
     { path: '/sales', element: <Sales /> },

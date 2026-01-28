@@ -1,5 +1,10 @@
-import { Layout, Menu, theme } from 'antd';
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { Layout, Menu } from 'antd';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useQueryClient } from '@tanstack/react-query';
+import { axiosInstance } from '../../lib/axios';
+import { Button } from 'antd';
 import {
   ShopOutlined,
   ShoppingCartOutlined,
@@ -25,30 +30,35 @@ interface Props {
 
 export default function Sidebar({ user }: Props) {
   const role = user?.role ?? 'CASHIER';
-  const isAdmin = role === 'ADMIN';
-  const sections = isAdmin ? adminSidebarItems : userSidebarItems;
+  const isAdminOrCashier = role === 'ADMIN' || role === 'CASHIER';
+  const sections = isAdminOrCashier ? adminSidebarItems : userSidebarItems;
   const location = useLocation();
-  const {
-    token: { colorBgContainer },
-  } = theme.useToken();
+  
 
   const navigate = useNavigate();
+  const qClient = useQueryClient();
+
+  const base = '/app';
 
   const items = sections.flatMap((section) =>
-    section.items.map((it) => ({
-      // use absolute path keys to avoid relative navigation issues
-      key: `/app/${it.url}`,
-      icon: ICON_MAP[section.title] ?? <AppstoreOutlined />,
-      label: <Link to={`/app/${it.url}`}>{it.title}</Link>,
-    })),
+    section.items.map((it) => {
+      const path = String(it.url || '');
+      const to = path.startsWith('/') ? path : `${base}/${path}`;
+      return {
+        key: to,
+        icon: ICON_MAP[section.title] ?? <AppstoreOutlined />,
+        label: <Link to={to}>{it.title}</Link>,
+      };
+    }),
   );
 
-  // Ensure background is applied with strong specificity and keep a visible width on small screens
+  // no static additions — adminSidebarItems will be shown for CASHIER as well
+
   return (
-    <Sider width={240} className="app-sider" style={{ background: 'transparent' }}>
-      <div className="sider-top" style={{ color: '#fff' }}>
+    <Sider width={240} className="app-sider">
+      <div className="sider-top">
         <div className="sider-logo">POS</div>
-        <div className="sider-sub">{isAdmin ? 'Admin Panel' : 'Cashier'}</div>
+        <div className="sider-sub">{role === 'ADMIN' ? 'Admin Panel' : role === 'CASHIER' ? 'Cashier Panel' : 'User'}</div>
       </div>
       <div className="sider-menu" style={{ background: 'transparent' }}>
         <Menu
@@ -62,6 +72,38 @@ export default function Sidebar({ user }: Props) {
             if (typeof info.key === 'string') navigate(info.key);
           }}
         />
+        <div style={{ padding: 12, borderTop: '1px solid rgba(0,0,0,0.04)', marginTop: 8 }}>
+          <Button
+            danger
+            block
+            onClick={async () => {
+              try {
+                await axiosInstance.post('/auth/logout');
+              } catch (e) {
+                console.error('Logout request failed', e);
+              }
+              try {
+                localStorage.removeItem('access_token');
+              } catch (e) {
+                console.error('Failed to remove access_token from localStorage', e);
+              }
+              try {
+                delete axiosInstance.defaults.headers.common['Authorization'];
+              } catch (e) {
+                /* ignore */
+              }
+              try {
+                qClient.clear();
+                qClient.removeQueries();
+              } catch (e) {
+                /* ignore */
+              }
+              navigate('/login');
+            }}
+          >
+            Logout
+          </Button>
+        </div>
       </div>
     </Sider>
   );

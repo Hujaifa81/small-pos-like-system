@@ -1,10 +1,4 @@
-import React from 'react';
-
+// SalesOverview has been removed — placeholder kept to avoid import errors during incremental builds.
 export default function SalesOverview() {
-  return (
-    <div>
-      <h1 className="text-2xl font-bold">Sales Overview</h1>
-      <p className="mt-4">Sales reporting and summaries will be here.</p>
-    </div>
-  );
+  return null;
 }

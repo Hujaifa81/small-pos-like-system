@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React from 'react';
+// React import not required with the new JSX transform
 import { Form, Input, Button, Card, Typography, message } from 'antd';
+import { Link } from 'react-router-dom';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { useNavigate } from 'react-router-dom';
 import { axiosInstance } from '../lib/axios';
@@ -31,17 +32,30 @@ export default function Login() {
       }
       if (user) {
         queryClient.setQueryData(['user', 'me'], user);
-        navigate('/app');
+        const role = user?.role;
+        if (role === 'CASHIER') {
+          navigate('/app/sales/mine');
+        } else if (role === 'ADMIN') {
+          navigate('/admin/products/create');
+        } else {
+          navigate('/app');
+        }
         return;
       }
-      // fallback: try /user/me if response didn't include user
       (async () => {
         try {
           const r = await axiosInstance.get('/user/me');
           const u = r.data?.data ?? null;
           if (u) {
             queryClient.setQueryData(['user', 'me'], u);
-            navigate('/app');
+            const role = u?.role;
+            if (role === 'CASHIER') {
+              navigate('/app/sales');
+            } else if (role === 'ADMIN') {
+              navigate('/admin/products/create');
+            } else {
+              navigate('/app');
+            }
             return;
           }
         } catch (e) {
@@ -51,14 +65,17 @@ export default function Login() {
       })();
     },
     onError: (err: any) => {
-      console.error(err);
-      const msg = err?.response?.data?.message ?? 'Login failed';
+      console.error('Login error', err?.response ?? err);
+      const status = err?.response?.status ?? null;
+      const serverMsg = err?.response?.data?.message ?? null;
+      const msg = serverMsg ?? (status ? `Login failed (status ${status})` : 'Login failed');
       message.error(msg);
     },
   });
 
   const onFinish = (values: any) => {
     const payload: LoginPayload = { email: values.email, password: values.password };
+    
     loginMutation.mutate(payload);
   };
 
@@ -82,6 +99,21 @@ export default function Login() {
               Sign in
             </Button>
           </Form.Item>
+
+          <Form.Item>
+            <Button
+              type="default"
+              onClick={() => loginMutation.mutate({ email: 'hujaifa@gmail.com', password: '123456@aA' })}
+              disabled={isSubmitting}
+              block
+            >
+              Demo login
+            </Button>
+          </Form.Item>
+
+          <div style={{ textAlign: 'center', marginTop: 8 }}>
+            Don't have an account? <Link to="/register">Register</Link>
+          </div>
         </Form>
       </Card>
     </div>

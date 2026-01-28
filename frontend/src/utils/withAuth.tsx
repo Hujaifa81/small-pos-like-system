@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { type ComponentType, useEffect, useState } from 'react';
+import { type ComponentType, useEffect, useState } from 'react';
 import { Navigate } from 'react-router-dom';
 import { axiosInstance } from '../lib/axios';
 import type { TRole } from '../types';
 
 
 
-export const withAuth = (Component: ComponentType<any>, requiredRole?: TRole) => {
+export const withAuth = (Component: ComponentType<any>, requiredRole?: TRole | TRole[]) => {
   return function AuthWrapper() {
     const [loading, setLoading] = useState(true);
     const [user, setUser] = useState<any>(null);
@@ -31,8 +31,11 @@ export const withAuth = (Component: ComponentType<any>, requiredRole?: TRole) =>
       return <Navigate to="/login" />;
     }
 
-    if (requiredRole && !loading && requiredRole !== user?.role) {
-      return <Navigate to="/unauthorized" />;
+    if (requiredRole && !loading) {
+      const allowed = Array.isArray(requiredRole) ? requiredRole : [requiredRole];
+      if (!allowed.includes(user?.role)) {
+        return <Navigate to="/unauthorized" />;
+      }
     }
 
     return <Component user={user} />;

@@ -33,7 +33,11 @@ export class AuthController {
       maxAge: 60 * 60 * 24 * 1000,
     };
     res.cookie('access_token', result.access_token, cookieOptions);
-    return { data: { user: result.user }, message: 'Login successful' };
+
+    return {
+      data: { user: result.user, access_token: result.access_token },
+      message: 'Login successful',
+    };
   }
 
   @Post('logout')

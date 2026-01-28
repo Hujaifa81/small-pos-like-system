@@ -28,14 +28,26 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
 
   async validate(payload: any) {
     const jti = payload?.jti;
+    try {
+      console.log('JwtStrategy: validating token jti=', jti);
+    } catch (e) {
+      console.error('JwtStrategy logging error:', e);
+    }
+
     if (jti && this.redisService) {
       try {
         const blocked = await this.redisService.get(`revoked_jti:${jti}`);
+        try {
+          console.log(`JwtStrategy: revoked_jti:${jti} ->`, blocked);
+        } catch (e) {
+          /* ignore logging errors */
+        }
         if (blocked) throw new UnauthorizedException('Token revoked');
       } catch (e) {
-        console.error(e);
+        console.error('JwtStrategy check error:', e);
       }
     }
+
     return { id: payload.sub, email: payload.email, role: payload.role };
   }
 }

@@ -9,7 +9,6 @@ import {
 } from '@nestjs/common';
 import { SalesService } from './sales.service';
 import { RolesGuard } from 'src/auth/roles.guard';
-import { Roles } from 'src/auth/roles.decorator';
 import { CreateSaleDto } from './dto/create-sale.dto';
 import { JwtAuthGuard } from 'src/auth/guards/jwt-auth.guard';
 import { CurrentUser } from 'src/auth/current-user.decorator';
@@ -50,7 +49,6 @@ export class SalesController {
   @Get(':id')
   @Get('all')
   @UseGuards(JwtAuthGuard, RolesGuard)
-  @Roles('ADMIN')
   async findAll(
     @Query() pagination: PaginationQueryDto,
     @Query() filters: SalesFilterDto,

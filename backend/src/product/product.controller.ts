@@ -14,7 +14,6 @@ import { CreateProductDto } from './dto/create-product.dto';
 import { UpdateProductDto } from './dto/update-product.dto';
 import { JwtAuthGuard } from 'src/auth/guards/jwt-auth.guard';
 import { RolesGuard } from 'src/auth/roles.guard';
-import { Roles } from 'src/auth/roles.decorator';
 import { PaginationQueryDto } from 'src/common/pagination/dto';
 import { ProductFilterDto } from 'src/product/dto/product-filter.dto';
 
@@ -24,7 +23,6 @@ export class ProductController {
 
   @Post()
   @UseGuards(JwtAuthGuard, RolesGuard)
-  @Roles('ADMIN')
   async create(@Body() createProductDto: CreateProductDto) {
     const result = await this.productService.create(createProductDto);
     return {
@@ -59,7 +57,6 @@ export class ProductController {
 
   @Patch(':id')
   @UseGuards(JwtAuthGuard, RolesGuard)
-  @Roles('ADMIN')
   async update(
     @Param('id') id: string,
     @Body() updateProductDto: UpdateProductDto,
@@ -73,7 +70,6 @@ export class ProductController {
 
   @Delete(':id')
   @UseGuards(JwtAuthGuard, RolesGuard)
-  @Roles('ADMIN')
   async remove(@Param('id') id: string) {
     await this.productService.remove(id);
     return {

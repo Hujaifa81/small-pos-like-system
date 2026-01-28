@@ -10,9 +10,9 @@ import { CreateProductDto } from './dto/create-product.dto';
 import { UpdateProductDto } from './dto/update-product.dto';
 import { PrismaService } from 'src/prisma.service';
 import { paginationHelper } from 'src/common/helpers/pagination.helper';
-import type { Prisma } from '../generated/prisma/client';
 import type { ProductFilterDto } from './dto/product-filter.dto';
 import type { IPaginationOptions } from 'src/common/pagination/types';
+import type { Prisma } from '@prisma/client';
 
 @Injectable()
 export class ProductService {

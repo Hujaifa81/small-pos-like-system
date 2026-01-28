@@ -12,7 +12,6 @@ import { PrismaService } from 'src/prisma.service';
 import { paginationHelper } from 'src/common/helpers/pagination.helper';
 import type { ProductFilterDto } from './dto/product-filter.dto';
 import type { IPaginationOptions } from 'src/common/pagination/types';
-import type { Prisma } from '@prisma/client';
 
 @Injectable()
 export class ProductService {
@@ -69,8 +68,8 @@ export class ProductService {
     const { page, limit, skip, sortBy, sortOrder } =
       paginationHelper.calculatePagination(options);
 
-    const where: Prisma.ProductWhereInput = {};
-    const and: Prisma.ProductWhereInput[] = [];
+    const where: any = {};
+    const and: any = [];
 
     if (filters.search) {
       and.push({

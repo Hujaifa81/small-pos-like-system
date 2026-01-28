@@ -1,0 +1,1200 @@
+{
+  "info": {
+    "_postman_id": "55bf989c-6797-4d26-aa99-b9967fd79dc9",
+    "name": "small-pos",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "33967616"
+  },
+  "item": [
+    {
+      "name": "auth",
+      "item": [
+        {
+          "name": "register",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"hujaifa2@example.com\",\r\n    \"password\": \"123456@aA\",\r\n    \"name\":\"Hujaifa\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://small-pos-like-system.onrender.com/auth/register",
+              "protocol": "https",
+              "host": [
+                "small-pos-like-system",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "register",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\": \"hujaifa2@example.com\",\r\n    \"password\": \"123456@aA\",\r\n    \"name\":\"Hujaifa\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://small-pos-like-system.onrender.com/auth/register",
+                  "protocol": "https",
+                  "host": [
+                    "small-pos-like-system",
+                    "onrender",
+                    "com"
+                  ],
+                  "path": [
+                    "auth",
+                    "register"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Wed, 28 Jan 2026 17:10:03 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "193"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "9c5219d90c54e87e-DAC"
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "br"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"fd-YP+GL1vVkx+emN+9WF6NS7wSYtg\""
+                },
+                {
+                  "key": "rndr-id",
+                  "value": "7c2aa77f-8c67-4f48"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-render-origin-server",
+                  "value": "Render"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=86400"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"User registered successfully\",\n    \"data\": {\n        \"id\": \"3f98d1b6-8bae-4bba-8647-5d65abf9b3a1\",\n        \"email\": \"hujaifa2@example.com\",\n        \"name\": \"Hujaifa\",\n        \"createdAt\": \"2026-01-28T17:10:02.961Z\",\n        \"updatedAt\": \"2026-01-28T17:10:02.961Z\",\n        \"role\": \"CASHIER\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"hujaifa2@example.com\",\r\n    \"password\": \"123456@aA\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://small-pos-like-system.onrender.com/auth/login",
+              "protocol": "https",
+              "host": [
+                "small-pos-like-system",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "login",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\": \"hujaifa2@example.com\",\r\n    \"password\": \"123456@aA\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://small-pos-like-system.onrender.com/auth/login",
+                  "protocol": "https",
+                  "host": [
+                    "small-pos-like-system",
+                    "onrender",
+                    "com"
+                  ],
+                  "path": [
+                    "auth",
+                    "login"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Wed, 28 Jan 2026 17:12:55 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "455"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "9c521e0eca5471f4-DAC"
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "br"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"23f-m0fE7yPP9VapOnrDFZndlLWghmo\""
+                },
+                {
+                  "key": "rndr-id",
+                  "value": "223e267d-0ad7-48a0"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imh1amFpZmEyQGV4YW1wbGUuY29tIiwic3ViIjoiM2Y5OGQxYjYtOGJhZS00YmJhLTg2NDctNWQ2NWFiZjliM2ExIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzY5NjIwMzc1LCJleHAiOjE3Njk3MDY3NzUsImp0aSI6IjVhYWJmZWRkLTcwZTAtNDc2ZC05YjFmLThhZmU1MDIwZWVhNiJ9.S56wGQlfnFzm6j3qo-oQHajSR0Tl92EtM5E2YQbyCBU; Max-Age=86400; Path=/; Expires=Thu, 29 Jan 2026 17:12:55 GMT; HttpOnly; Secure; SameSite=Lax"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-render-origin-server",
+                  "value": "Render"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=86400"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Login successful\",\n    \"data\": {\n        \"user\": {\n            \"id\": \"3f98d1b6-8bae-4bba-8647-5d65abf9b3a1\",\n            \"email\": \"hujaifa2@example.com\",\n            \"name\": \"Hujaifa\",\n            \"createdAt\": \"2026-01-28T17:10:02.961Z\",\n            \"updatedAt\": \"2026-01-28T17:10:02.961Z\",\n            \"role\": \"ADMIN\"\n        },\n        \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imh1amFpZmEyQGV4YW1wbGUuY29tIiwic3ViIjoiM2Y5OGQxYjYtOGJhZS00YmJhLTg2NDctNWQ2NWFiZjliM2ExIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzY5NjIwMzc1LCJleHAiOjE3Njk3MDY3NzUsImp0aSI6IjVhYWJmZWRkLTcwZTAtNDc2ZC05YjFmLThhZmU1MDIwZWVhNiJ9.S56wGQlfnFzm6j3qo-oQHajSR0Tl92EtM5E2YQbyCBU\"\n    }\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "product",
+      "item": [
+        {
+          "name": "create",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "get",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://small-pos-like-system.onrender.com/product?page=1&limit=5&sortBy=price&sortOrder=asc&inStockOnly=1&maxPrice=50&minPrice=10",
+              "protocol": "https",
+              "host": [
+                "small-pos-like-system",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "product"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "5"
+                },
+                {
+                  "key": "sortBy",
+                  "value": "price"
+                },
+                {
+                  "key": "sortOrder",
+                  "value": "asc"
+                },
+                {
+                  "key": "inStockOnly",
+                  "value": "1"
+                },
+                {
+                  "key": "maxPrice",
+                  "value": "50"
+                },
+                {
+                  "key": "minPrice",
+                  "value": "10"
+                },
+                {
+                  "key": "search",
+                  "value": "mango",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "get",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://small-pos-like-system.onrender.com/product?page=1&limit=5&sortBy=price&sortOrder=asc&inStockOnly=1&maxPrice=50&minPrice=10",
+                  "protocol": "https",
+                  "host": [
+                    "small-pos-like-system",
+                    "onrender",
+                    "com"
+                  ],
+                  "path": [
+                    "product"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "5"
+                    },
+                    {
+                      "key": "sortBy",
+                      "value": "price"
+                    },
+                    {
+                      "key": "sortOrder",
+                      "value": "asc"
+                    },
+                    {
+                      "key": "inStockOnly",
+                      "value": "1"
+                    },
+                    {
+                      "key": "maxPrice",
+                      "value": "50"
+                    },
+                    {
+                      "key": "minPrice",
+                      "value": "10"
+                    },
+                    {
+                      "key": "search",
+                      "value": "mango",
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Wed, 28 Jan 2026 17:14:55 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "307"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "9c5220fe9c1a71f4-DAC"
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "br"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"216-xsL2kuBs2fVWPBSaXasxRW3nSiI\""
+                },
+                {
+                  "key": "rndr-id",
+                  "value": "d67787e1-0490-4172"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-render-origin-server",
+                  "value": "Render"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=86400"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Products retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": \"056bd0f4-2e72-48de-9d59-7164829088eb\",\n            \"name\": \"Premium Apple Drink\",\n            \"sku\": \"PRE-APP-001\",\n            \"price\": 10.5,\n            \"stockQuantity\": 100,\n            \"createdAt\": \"2026-01-28T17:13:28.335Z\",\n            \"updatedAt\": \"2026-01-28T17:13:28.335Z\"\n        },\n        {\n            \"id\": \"d27bd912-e57c-4c11-8e44-f7f684f0731b\",\n            \"name\": \"Premium Mango Drink\",\n            \"sku\": \"PRE-MAN-002\",\n            \"price\": 20.5,\n            \"stockQuantity\": 100,\n            \"createdAt\": \"2026-01-28T17:13:57.030Z\",\n            \"updatedAt\": \"2026-01-28T17:13:57.030Z\"\n        }\n    ],\n    \"meta\": {\n        \"total\": 2,\n        \"page\": 1,\n        \"limit\": 5,\n        \"totalPages\": 1\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "update",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imh1amFpZmEyQGV4YW1wbGUuY29tIiwic3ViIjoiM2Y5OGQxYjYtOGJhZS00YmJhLTg2NDctNWQ2NWFiZjliM2ExIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzY5NjIwMzc1LCJleHAiOjE3Njk3MDY3NzUsImp0aSI6IjVhYWJmZWRkLTcwZTAtNDc2ZC05YjFmLThhZmU1MDIwZWVhNiJ9.S56wGQlfnFzm6j3qo-oQHajSR0Tl92EtM5E2YQbyCBU",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"stockQuantity\":200\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://small-pos-like-system.onrender.com/product/:id",
+              "protocol": "https",
+              "host": [
+                "small-pos-like-system",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "product",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "056bd0f4-2e72-48de-9d59-7164829088eb"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "update",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imh1amFpZmEyQGV4YW1wbGUuY29tIiwic3ViIjoiM2Y5OGQxYjYtOGJhZS00YmJhLTg2NDctNWQ2NWFiZjliM2ExIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzY5NjIwMzc1LCJleHAiOjE3Njk3MDY3NzUsImp0aSI6IjVhYWJmZWRkLTcwZTAtNDc2ZC05YjFmLThhZmU1MDIwZWVhNiJ9.S56wGQlfnFzm6j3qo-oQHajSR0Tl92EtM5E2YQbyCBU",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"stockQuantity\":200\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://small-pos-like-system.onrender.com/product/:id",
+                  "protocol": "https",
+                  "host": [
+                    "small-pos-like-system",
+                    "onrender",
+                    "com"
+                  ],
+                  "path": [
+                    "product",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "056bd0f4-2e72-48de-9d59-7164829088eb"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Wed, 28 Jan 2026 17:16:02 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "207"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "9c5222984976d058-DAC"
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "br"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"10e-TXFp9uHiME37+bOkFtSfLyI2k8o\""
+                },
+                {
+                  "key": "rndr-id",
+                  "value": "94691d23-7d47-47a8"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-render-origin-server",
+                  "value": "Render"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=86400"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Product updated successfully\",\n    \"data\": {\n        \"id\": \"056bd0f4-2e72-48de-9d59-7164829088eb\",\n        \"name\": \"Premium Apple Drink\",\n        \"sku\": \"PRE-APP-001\",\n        \"price\": 10.5,\n        \"stockQuantity\": 200,\n        \"createdAt\": \"2026-01-28T17:13:28.335Z\",\n        \"updatedAt\": \"2026-01-28T17:16:02.206Z\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "single-get",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "user",
+      "item": [
+        {
+          "name": "me",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imh1amFpZmEyQGV4YW1wbGUuY29tIiwic3ViIjoiM2Y5OGQxYjYtOGJhZS00YmJhLTg2NDctNWQ2NWFiZjliM2ExIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzY5NjIwMzc1LCJleHAiOjE3Njk3MDY3NzUsImp0aSI6IjVhYWJmZWRkLTcwZTAtNDc2ZC05YjFmLThhZmU1MDIwZWVhNiJ9.S56wGQlfnFzm6j3qo-oQHajSR0Tl92EtM5E2YQbyCBU",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://small-pos-like-system.onrender.com/user/me",
+              "protocol": "https",
+              "host": [
+                "small-pos-like-system",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "user",
+                "me"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "me",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imh1amFpZmEyQGV4YW1wbGUuY29tIiwic3ViIjoiM2Y5OGQxYjYtOGJhZS00YmJhLTg2NDctNWQ2NWFiZjliM2ExIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzY5NjIwMzc1LCJleHAiOjE3Njk3MDY3NzUsImp0aSI6IjVhYWJmZWRkLTcwZTAtNDc2ZC05YjFmLThhZmU1MDIwZWVhNiJ9.S56wGQlfnFzm6j3qo-oQHajSR0Tl92EtM5E2YQbyCBU",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "https://small-pos-like-system.onrender.com/user/me",
+                  "protocol": "https",
+                  "host": [
+                    "small-pos-like-system",
+                    "onrender",
+                    "com"
+                  ],
+                  "path": [
+                    "user",
+                    "me"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Wed, 28 Jan 2026 17:19:02 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "155"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "9c5227062a6ed058-DAC"
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "br"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"e6-qWncNLHCoKkwl4hSF/3+nuIS5N8\""
+                },
+                {
+                  "key": "rndr-id",
+                  "value": "000731dd-5ed9-4018"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-render-origin-server",
+                  "value": "Render"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=86400"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": \"3f98d1b6-8bae-4bba-8647-5d65abf9b3a1\",\n        \"email\": \"hujaifa2@example.com\",\n        \"name\": \"Hujaifa\",\n        \"createdAt\": \"2026-01-28T17:10:02.961Z\",\n        \"updatedAt\": \"2026-01-28T17:10:02.961Z\",\n        \"role\": \"ADMIN\"\n    }\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "sales",
+      "item": [
+        {
+          "name": "create-sale",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imh1amFpZmEyQGV4YW1wbGUuY29tIiwic3ViIjoiM2Y5OGQxYjYtOGJhZS00YmJhLTg2NDctNWQ2NWFiZjliM2ExIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzY5NjIwMzc1LCJleHAiOjE3Njk3MDY3NzUsImp0aSI6IjVhYWJmZWRkLTcwZTAtNDc2ZC05YjFmLThhZmU1MDIwZWVhNiJ9.S56wGQlfnFzm6j3qo-oQHajSR0Tl92EtM5E2YQbyCBU",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"items\": [\r\n        {\r\n            \"productId\": \"d27bd912-e57c-4c11-8e44-f7f684f0731b\",\r\n            \"quantity\": 5\r\n        }\r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://small-pos-like-system.onrender.com/sales",
+              "protocol": "https",
+              "host": [
+                "small-pos-like-system",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "sales"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "create-sale",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imh1amFpZmEyQGV4YW1wbGUuY29tIiwic3ViIjoiM2Y5OGQxYjYtOGJhZS00YmJhLTg2NDctNWQ2NWFiZjliM2ExIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzY5NjIwMzc1LCJleHAiOjE3Njk3MDY3NzUsImp0aSI6IjVhYWJmZWRkLTcwZTAtNDc2ZC05YjFmLThhZmU1MDIwZWVhNiJ9.S56wGQlfnFzm6j3qo-oQHajSR0Tl92EtM5E2YQbyCBU",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"items\": [\r\n        {\r\n            \"productId\": \"d27bd912-e57c-4c11-8e44-f7f684f0731b\",\r\n            \"quantity\": 5\r\n        }\r\n    ]\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://small-pos-like-system.onrender.com/sales",
+                  "protocol": "https",
+                  "host": [
+                    "small-pos-like-system",
+                    "onrender",
+                    "com"
+                  ],
+                  "path": [
+                    "sales"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Wed, 28 Jan 2026 17:23:33 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "279"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "9c522d95cf47ded3-DAC"
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "br"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"1ca-KQeIevDztAvuEVvpHKgi6YNc5mM\""
+                },
+                {
+                  "key": "rndr-id",
+                  "value": "d295895f-43c7-4d23"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-render-origin-server",
+                  "value": "Render"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=86400"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Sale created successfully\",\n    \"data\": {\n        \"id\": \"8c71e1f5-075e-4e50-a32e-aed9d41fa385\",\n        \"userId\": \"3f98d1b6-8bae-4bba-8647-5d65abf9b3a1\",\n        \"total\": 102.5,\n        \"createdAt\": \"2026-01-28T17:23:32.364Z\",\n        \"updatedAt\": \"2026-01-28T17:23:32.364Z\",\n        \"items\": [\n            {\n                \"id\": \"a9eb318b-6fe1-4f15-9385-9a8d30d0cafe\",\n                \"productId\": \"d27bd912-e57c-4c11-8e44-f7f684f0731b\",\n                \"quantity\": 5,\n                \"price\": 20.5,\n                \"createdAt\": \"2026-01-28T17:23:32.364Z\",\n                \"updatedAt\": \"2026-01-28T17:23:32.364Z\"\n            }\n        ]\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "my-sales",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imh1amFpZmEyQGV4YW1wbGUuY29tIiwic3ViIjoiM2Y5OGQxYjYtOGJhZS00YmJhLTg2NDctNWQ2NWFiZjliM2ExIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzY5NjIwMzc1LCJleHAiOjE3Njk3MDY3NzUsImp0aSI6IjVhYWJmZWRkLTcwZTAtNDc2ZC05YjFmLThhZmU1MDIwZWVhNiJ9.S56wGQlfnFzm6j3qo-oQHajSR0Tl92EtM5E2YQbyCBU",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"items\": [\r\n        {\r\n            \"productId\": \"d27bd912-e57c-4c11-8e44-f7f684f0731b\",\r\n            \"quantity\": 5\r\n        }\r\n    ]\r\n}"
+            },
+            "url": {
+              "raw": "https://small-pos-like-system.onrender.com/sales",
+              "protocol": "https",
+              "host": [
+                "small-pos-like-system",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "sales"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "my-sales",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imh1amFpZmEyQGV4YW1wbGUuY29tIiwic3ViIjoiM2Y5OGQxYjYtOGJhZS00YmJhLTg2NDctNWQ2NWFiZjliM2ExIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzY5NjIwMzc1LCJleHAiOjE3Njk3MDY3NzUsImp0aSI6IjVhYWJmZWRkLTcwZTAtNDc2ZC05YjFmLThhZmU1MDIwZWVhNiJ9.S56wGQlfnFzm6j3qo-oQHajSR0Tl92EtM5E2YQbyCBU",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"items\": [\r\n        {\r\n            \"productId\": \"d27bd912-e57c-4c11-8e44-f7f684f0731b\",\r\n            \"quantity\": 5\r\n        }\r\n    ]\r\n}"
+                },
+                "url": {
+                  "raw": "https://small-pos-like-system.onrender.com/sales",
+                  "protocol": "https",
+                  "host": [
+                    "small-pos-like-system",
+                    "onrender",
+                    "com"
+                  ],
+                  "path": [
+                    "sales"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Wed, 28 Jan 2026 17:24:28 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "311"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "9c522efc4badded3-DAC"
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "br"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"205-95RzGZaleH3521ATGPHMGZLNDdM\""
+                },
+                {
+                  "key": "rndr-id",
+                  "value": "0c3ccce5-0645-43b9"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-render-origin-server",
+                  "value": "Render"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=86400"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Sales retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": \"8c71e1f5-075e-4e50-a32e-aed9d41fa385\",\n            \"userId\": \"3f98d1b6-8bae-4bba-8647-5d65abf9b3a1\",\n            \"total\": 102.5,\n            \"createdAt\": \"2026-01-28T17:23:32.364Z\",\n            \"updatedAt\": \"2026-01-28T17:23:32.364Z\",\n            \"items\": [\n                {\n                    \"id\": \"a9eb318b-6fe1-4f15-9385-9a8d30d0cafe\",\n                    \"productId\": \"d27bd912-e57c-4c11-8e44-f7f684f0731b\",\n                    \"quantity\": 5,\n                    \"price\": 20.5,\n                    \"createdAt\": \"2026-01-28T17:23:32.364Z\",\n                    \"updatedAt\": \"2026-01-28T17:23:32.364Z\"\n                }\n            ]\n        }\n    ],\n    \"meta\": {\n        \"total\": 1,\n        \"page\": 1,\n        \"limit\": 10,\n        \"totalPages\": 1\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "all-sales",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imh1amFpZmEyQGV4YW1wbGUuY29tIiwic3ViIjoiM2Y5OGQxYjYtOGJhZS00YmJhLTg2NDctNWQ2NWFiZjliM2ExIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzY5NjIwMzc1LCJleHAiOjE3Njk3MDY3NzUsImp0aSI6IjVhYWJmZWRkLTcwZTAtNDc2ZC05YjFmLThhZmU1MDIwZWVhNiJ9.S56wGQlfnFzm6j3qo-oQHajSR0Tl92EtM5E2YQbyCBU",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"items\": [\r\n        {\r\n            \"productId\": \"d27bd912-e57c-4c11-8e44-f7f684f0731b\",\r\n            \"quantity\": 5\r\n        }\r\n    ]\r\n}"
+            },
+            "url": {
+              "raw": "https://small-pos-like-system.onrender.com/sales/all",
+              "protocol": "https",
+              "host": [
+                "small-pos-like-system",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "sales",
+                "all"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "all-sales",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imh1amFpZmEyQGV4YW1wbGUuY29tIiwic3ViIjoiM2Y5OGQxYjYtOGJhZS00YmJhLTg2NDctNWQ2NWFiZjliM2ExIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzY5NjIwMzc1LCJleHAiOjE3Njk3MDY3NzUsImp0aSI6IjVhYWJmZWRkLTcwZTAtNDc2ZC05YjFmLThhZmU1MDIwZWVhNiJ9.S56wGQlfnFzm6j3qo-oQHajSR0Tl92EtM5E2YQbyCBU",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"items\": [\r\n        {\r\n            \"productId\": \"d27bd912-e57c-4c11-8e44-f7f684f0731b\",\r\n            \"quantity\": 5\r\n        }\r\n    ]\r\n}"
+                },
+                "url": {
+                  "raw": "https://small-pos-like-system.onrender.com/sales/all",
+                  "protocol": "https",
+                  "host": [
+                    "small-pos-like-system",
+                    "onrender",
+                    "com"
+                  ],
+                  "path": [
+                    "sales",
+                    "all"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Wed, 28 Jan 2026 17:25:43 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "315"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "9c5230c4ba192a54-DAC"
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "br"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"209-LF/X4a1bHr2JkFWTZ3vMrmbhusc\""
+                },
+                {
+                  "key": "rndr-id",
+                  "value": "0f5e8a48-ece9-42b5"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-render-origin-server",
+                  "value": "Render"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=86400"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"All sales retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": \"8c71e1f5-075e-4e50-a32e-aed9d41fa385\",\n            \"userId\": \"3f98d1b6-8bae-4bba-8647-5d65abf9b3a1\",\n            \"total\": 102.5,\n            \"createdAt\": \"2026-01-28T17:23:32.364Z\",\n            \"updatedAt\": \"2026-01-28T17:23:32.364Z\",\n            \"items\": [\n                {\n                    \"id\": \"a9eb318b-6fe1-4f15-9385-9a8d30d0cafe\",\n                    \"productId\": \"d27bd912-e57c-4c11-8e44-f7f684f0731b\",\n                    \"quantity\": 5,\n                    \"price\": 20.5,\n                    \"createdAt\": \"2026-01-28T17:23:32.364Z\",\n                    \"updatedAt\": \"2026-01-28T17:23:32.364Z\"\n                }\n            ]\n        }\n    ],\n    \"meta\": {\n        \"total\": 1,\n        \"page\": 1,\n        \"limit\": 10,\n        \"totalPages\": 1\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "single-get",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

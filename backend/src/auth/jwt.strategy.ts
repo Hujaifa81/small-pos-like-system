@@ -40,7 +40,7 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
         try {
           console.log(`JwtStrategy: revoked_jti:${jti} ->`, blocked);
         } catch (e) {
-          /* ignore logging errors */
+          console.error('JwtStrategy logging error:', e);
         }
         if (blocked) throw new UnauthorizedException('Token revoked');
       } catch (e) {

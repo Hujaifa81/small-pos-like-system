@@ -1,0 +1,53 @@
+.app-sider {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0;
+  background: linear-gradient(180deg,#fff 0%, #f7f7fb 50% , #ffecec 100%);
+  color: #111;
+  border-right: 1px solid rgba(0,0,0,0.04);
+}
+.sider-top {
+  padding: 20px 20px 8px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.sider-logo {
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: #111 !important;
+}
+.sider-sub {
+  font-size: 12px;
+  opacity: 0.8;
+  color: rgba(0,0,0,0.65) !important;
+}
+.sider-menu {
+  margin-top: 8px;
+  padding: 12px 8px 20px 8px;
+  background: transparent;
+  flex: 1;
+  overflow: auto;
+}
+.app-sider .ant-menu {
+  background: transparent !important;
+}
+.app-sider .ant-menu-item {
+  border-radius: 8px;
+  margin: 6px 0;
+  color: #111 !important;
+}
+.app-sider .ant-menu-item .anticon {
+  color: rgba(0,0,0,0.7) !important;
+}
+.app-sider .ant-menu-item a {
+  color: inherit !important;
+}
+.app-sider .ant-menu-item-selected,
+.app-sider .ant-menu-submenu-title:hover,
+.app-sider .ant-menu-item:hover {
+  background: rgba(0,0,0,0.03) !important;
+}
+

@@ -45,7 +45,7 @@
                 "header": [],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\r\n    \"email\": \"hujaifa2@example.com\",\r\n    \"password\": \"123456@aA\",\r\n    \"name\":\"Hujaifa\"\r\n}",
+                  "raw": "{\r\n    \"email\": \"hujaifa3@example.com\",\r\n    \"password\": \"123456@aA\",\r\n    \"name\":\"Hujaifa\"\r\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -72,7 +72,7 @@
               "header": [
                 {
                   "key": "Date",
-                  "value": "Wed, 28 Jan 2026 17:10:03 GMT"
+                  "value": "Thu, 29 Jan 2026 14:56:01 GMT"
                 },
                 {
                   "key": "Content-Type",
@@ -80,7 +80,7 @@
                 },
                 {
                   "key": "Content-Length",
-                  "value": "193"
+                  "value": "192"
                 },
                 {
                   "key": "Connection",
@@ -88,7 +88,7 @@
                 },
                 {
                   "key": "CF-RAY",
-                  "value": "9c5219d90c54e87e-DAC"
+                  "value": "9c5992e5ea9971f4-DAC"
                 },
                 {
                   "key": "access-control-allow-credentials",
@@ -100,11 +100,11 @@
                 },
                 {
                   "key": "etag",
-                  "value": "W/\"fd-YP+GL1vVkx+emN+9WF6NS7wSYtg\""
+                  "value": "W/\"fd-DtVf5vKoINvBoUXkoa3rzllWXrQ\""
                 },
                 {
                   "key": "rndr-id",
-                  "value": "7c2aa77f-8c67-4f48"
+                  "value": "9ba7a715-8d9a-467f"
                 },
                 {
                   "key": "vary",
@@ -136,7 +136,7 @@
                 }
               ],
               "cookie": [],
-              "body": "{\n    \"success\": true,\n    \"message\": \"User registered successfully\",\n    \"data\": {\n        \"id\": \"3f98d1b6-8bae-4bba-8647-5d65abf9b3a1\",\n        \"email\": \"hujaifa2@example.com\",\n        \"name\": \"Hujaifa\",\n        \"createdAt\": \"2026-01-28T17:10:02.961Z\",\n        \"updatedAt\": \"2026-01-28T17:10:02.961Z\",\n        \"role\": \"CASHIER\"\n    }\n}"
+              "body": "{\n    \"success\": true,\n    \"message\": \"User registered successfully\",\n    \"data\": {\n        \"id\": \"0aa8fe99-80d9-451d-a34d-b03cb3d63a7c\",\n        \"email\": \"hujaifa3@example.com\",\n        \"name\": \"Hujaifa\",\n        \"createdAt\": \"2026-01-29T14:56:01.416Z\",\n        \"updatedAt\": \"2026-01-29T14:56:01.416Z\",\n        \"role\": \"CASHIER\"\n    }\n}"
             }
           ]
         },
@@ -168,15 +168,61 @@
               ]
             }
           },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "product",
+      "item": [
+        {
+          "name": "create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imh1amFpZmEyQGV4YW1wbGUuY29tIiwic3ViIjoiM2Y5OGQxYjYtOGJhZS00YmJhLTg2NDctNWQ2NWFiZjliM2ExIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzY5NjIwMzc1LCJleHAiOjE3Njk3MDY3NzUsImp0aSI6IjVhYWJmZWRkLTcwZTAtNDc2ZC05YjFmLThhZmU1MDIwZWVhNiJ9.S56wGQlfnFzm6j3qo-oQHajSR0Tl92EtM5E2YQbyCBU",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Premium Orange Drink\",\r\n  \"sku\": \"PRE-ONG-002\",\r\n  \"price\": 20.50,\r\n  \"stockQuantity\": 100\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://small-pos-like-system.onrender.com/product",
+              "protocol": "https",
+              "host": [
+                "small-pos-like-system",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "product"
+              ]
+            }
+          },
           "response": [
             {
-              "name": "login",
+              "name": "create",
               "originalRequest": {
                 "method": "POST",
-                "header": [],
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imh1amFpZmEyQGV4YW1wbGUuY29tIiwic3ViIjoiM2Y5OGQxYjYtOGJhZS00YmJhLTg2NDctNWQ2NWFiZjliM2ExIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzY5NjIwMzc1LCJleHAiOjE3Njk3MDY3NzUsImp0aSI6IjVhYWJmZWRkLTcwZTAtNDc2ZC05YjFmLThhZmU1MDIwZWVhNiJ9.S56wGQlfnFzm6j3qo-oQHajSR0Tl92EtM5E2YQbyCBU",
+                    "type": "text"
+                  }
+                ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\r\n    \"email\": \"hujaifa2@example.com\",\r\n    \"password\": \"123456@aA\"\r\n}",
+                  "raw": "{\r\n  \"name\": \"Premium Orange Drink\",\r\n  \"sku\": \"PRE-ONG-002\",\r\n  \"price\": 20.50,\r\n  \"stockQuantity\": 100\r\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -184,7 +230,7 @@
                   }
                 },
                 "url": {
-                  "raw": "https://small-pos-like-system.onrender.com/auth/login",
+                  "raw": "https://small-pos-like-system.onrender.com/product",
                   "protocol": "https",
                   "host": [
                     "small-pos-like-system",
@@ -192,8 +238,7 @@
                     "com"
                   ],
                   "path": [
-                    "auth",
-                    "login"
+                    "product"
                   ]
                 }
               },
@@ -203,7 +248,7 @@
               "header": [
                 {
                   "key": "Date",
-                  "value": "Wed, 28 Jan 2026 17:12:55 GMT"
+                  "value": "Thu, 29 Jan 2026 14:57:28 GMT"
                 },
                 {
                   "key": "Content-Type",
@@ -211,7 +256,7 @@
                 },
                 {
                   "key": "Content-Length",
-                  "value": "455"
+                  "value": "190"
                 },
                 {
                   "key": "Connection",
@@ -219,7 +264,7 @@
                 },
                 {
                   "key": "CF-RAY",
-                  "value": "9c521e0eca5471f4-DAC"
+                  "value": "9c5995067d1171f4-DAC"
                 },
                 {
                   "key": "access-control-allow-credentials",
@@ -231,15 +276,11 @@
                 },
                 {
                   "key": "etag",
-                  "value": "W/\"23f-m0fE7yPP9VapOnrDFZndlLWghmo\""
+                  "value": "W/\"10f-Li9CYX47P1sKrFnDsRLNitxJg6w\""
                 },
                 {
                   "key": "rndr-id",
-                  "value": "223e267d-0ad7-48a0"
-                },
-                {
-                  "key": "Set-Cookie",
-                  "value": "access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imh1amFpZmEyQGV4YW1wbGUuY29tIiwic3ViIjoiM2Y5OGQxYjYtOGJhZS00YmJhLTg2NDctNWQ2NWFiZjliM2ExIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzY5NjIwMzc1LCJleHAiOjE3Njk3MDY3NzUsImp0aSI6IjVhYWJmZWRkLTcwZTAtNDc2ZC05YjFmLThhZmU1MDIwZWVhNiJ9.S56wGQlfnFzm6j3qo-oQHajSR0Tl92EtM5E2YQbyCBU; Max-Age=86400; Path=/; Expires=Thu, 29 Jan 2026 17:12:55 GMT; HttpOnly; Secure; SameSite=Lax"
+                  "value": "50e72006-f952-4cee"
                 },
                 {
                   "key": "vary",
@@ -271,22 +312,9 @@
                 }
               ],
               "cookie": [],
-              "body": "{\n    \"success\": true,\n    \"message\": \"Login successful\",\n    \"data\": {\n        \"user\": {\n            \"id\": \"3f98d1b6-8bae-4bba-8647-5d65abf9b3a1\",\n            \"email\": \"hujaifa2@example.com\",\n            \"name\": \"Hujaifa\",\n            \"createdAt\": \"2026-01-28T17:10:02.961Z\",\n            \"updatedAt\": \"2026-01-28T17:10:02.961Z\",\n            \"role\": \"ADMIN\"\n        },\n        \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imh1amFpZmEyQGV4YW1wbGUuY29tIiwic3ViIjoiM2Y5OGQxYjYtOGJhZS00YmJhLTg2NDctNWQ2NWFiZjliM2ExIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzY5NjIwMzc1LCJleHAiOjE3Njk3MDY3NzUsImp0aSI6IjVhYWJmZWRkLTcwZTAtNDc2ZC05YjFmLThhZmU1MDIwZWVhNiJ9.S56wGQlfnFzm6j3qo-oQHajSR0Tl92EtM5E2YQbyCBU\"\n    }\n}"
+              "body": "{\n    \"success\": true,\n    \"message\": \"Product created successfully\",\n    \"data\": {\n        \"id\": \"92a3fccb-667c-4bf9-90c7-6f75e4401a5e\",\n        \"name\": \"Premium Orange Drink\",\n        \"sku\": \"PRE-ONG-002\",\n        \"price\": 20.5,\n        \"stockQuantity\": 100,\n        \"createdAt\": \"2026-01-29T14:57:28.407Z\",\n        \"updatedAt\": \"2026-01-29T14:57:28.407Z\"\n    }\n}"
             }
           ]
-        }
-      ]
-    },
-    {
-      "name": "product",
-      "item": [
-        {
-          "name": "create",
-          "request": {
-            "method": "GET",
-            "header": []
-          },
-          "response": []
         },
         {
           "name": "get",
